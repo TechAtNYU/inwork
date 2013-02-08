@@ -15,6 +15,11 @@
   <%= @advertisement.alt_text %>
 </p>
 
+<p>
+  <b>Image:</b>
+  <%= image_tag @advertisement.image.url %>
+
+</p>
 
 <%= link_to 'Edit', edit_advertisement_path(@advertisement) %> |
 <%= link_to 'Back', advertisements_path %>
