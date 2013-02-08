@@ -5,4 +5,4 @@
 
 $ ->
   $('.copy-content').click ->
-    $('.copy-content').select()
+    $(this).select()
