@@ -13,21 +13,25 @@
 
   <div class="field">
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :placeholder=> "'DemoDays March 2013'" %>
+    <span class="help-block">The internal-facing title for this ad. Make it descriptive!</span>
   </div>
   <div class="field">
     <%= f.label :ad_target_url %>
-    <%= f.text_field :ad_target_url %>
+    <%= f.text_field :ad_target_url, :placeholder=> "'http://meetup.com/demodays'" %>
+    <span class="help-block">The complete URL that this ad should point to.</span>
   </div>
   <div class="field">
     <%= f.label :alt_text %>
-    <%= f.text_field :alt_text %>
+    <%= f.text_field :alt_text, :placeholder=> "'DemoDays March Meetup'" %>
+    <span class="help-block">Alt text when a user hovers over your ad</span>
   </div>
   <div class="field">
     <%= f.label :image %>
     <%= f.file_field :image %>
+    <span class="help-block">Must be 500x140 px, please use a JPEG</span>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions" style="margin-top: 20px">
+    <%= f.submit 'Submit', :class => 'btn btn-primary btn-large' %>
   </div>
 <% end %>

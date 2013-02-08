@@ -2,7 +2,7 @@ class AdvertisementsController < ApplicationController
   # GET /advertisements
   # GET /advertisements.json
   def index
-    @advertisements = Advertisement.all
+    @advertisements = Advertisement.order('created_at DESC').all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -44,7 +44,7 @@ class AdvertisementsController < ApplicationController
 
     respond_to do |format|
       if @advertisement.save
-        format.html { redirect_to @advertisement, notice: 'Advertisement was successfully created.' }
+        format.html { redirect_to root_url, notice: 'Advertisement was successfully created.' }
         format.json { render json: @advertisement, status: :created, location: @advertisement }
       else
         format.html { render action: "new" }
