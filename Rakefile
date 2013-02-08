@@ -6,4 +6,4 @@ require File.expand_path('../config/application', __FILE__)
 
 Inwork::Application.load_tasks
 
-task :default => [:test]
+task :default => []
