@@ -6,7 +6,7 @@ gem 'rails', '3.2.11'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'paperclip'
+gem 'paperclip', '~> 3.0'
 gem 'aws-sdk'
 gem 'thin'
 gem 'dotenv', :groups => [:development, :test]
