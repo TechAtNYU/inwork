@@ -1,26 +1,18 @@
-<h1>Listing advertisements</h1>
+<h1>The Tech@NYU Network</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Ad target url</th>
-    <th>Alt text</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<p>Leaders, guests, and friends, please refer to this page in order to cross-promote our awesome events.</p>
 
 <% @advertisements.each do |advertisement| %>
-  <tr>
-    <td><%= advertisement.title %></td>
-    <td><%= advertisement.ad_target_url %></td>
-    <td><%= advertisement.alt_text %></td>
-    <td><%= link_to 'Show', advertisement %></td>
+  <div class="ad">
+    <h3><%= advertisement.title %></h3>
+
+    <a href="<%= advertisement.ad_target_url %>"><img alt="<%= advertisement.alt_text %>" src="SOMETHING"></a>
+
+    <textarea><a href="<%= advertisement.ad_target_url %>"><img alt="<%= advertisement.alt_text %>" src="SOMETHING"></a></textarea>
     <td><%= link_to 'Edit', edit_advertisement_path(advertisement) %></td>
     <td><%= link_to 'Destroy', advertisement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+  </div>
 <% end %>
-</table>
 
 <br />
 
