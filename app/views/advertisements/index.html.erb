@@ -10,9 +10,8 @@
       <img alt="<%= advertisement.alt_text %>" src="<%= advertisement.image.url%>">
     </a>
 
-    <textarea>
-      <a href="<%= advertisement.ad_target_url %>">
-      <img alt="<%= advertisement.alt_text %>" src="SOMETHING"></a>
+    <p>Copy this and paste as HTML</p>
+    <textarea class="copy-content"><a href="<%= advertisement.ad_target_url %>"><img alt="<%= advertisement.alt_text %>" src="SOMETHING"></a>
     </textarea>
     <td><%= link_to 'Edit', edit_advertisement_path(advertisement) %></td>
     <td><%= link_to 'Destroy', advertisement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
