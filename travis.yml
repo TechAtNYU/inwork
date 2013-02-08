@@ -1,0 +1,26 @@
+language: ruby
+rvm:
+  - 1.9.3
+env:
+  - DB=sqlite
+script:
+  - RAILS_ENV=test bundle exec rake --trace db:migrate test
+env:
+  global:
+    - secure: "PMeN9rrrN4gKV1twquMFPVR+M6nEAniND/bbnAl4O+QM8WK20VNZoJzC/NAv\nHDjE3F4YbYm2D+PUDk/+vq/UtjpAaCqYVhNANm6N2ec6qNylIyOPOeZbqAv1\ni3BUa9DE09c8kqwE5Y09kismY9+FvELDVz2weFnecVhfSDgZWKA="
+after_script:
+  # Install the Heroku gem (or the Heroku toolbelt)
+  - gem install heroku
+  # Add your Heroku git repo:
+  - git remote add heroku  git@heroku.com:thawing-shelf-1446.git
+  # Turn off warnings about SSH keys:
+  - echo "Host heroku.com" >> ~/.ssh/config
+  - echo "   StrictHostKeyChecking no" >> ~/.ssh/config
+  - echo "   CheckHostIP no" >> ~/.ssh/config
+  - echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
+  # Clear your current Heroku SSH keys:
+  - heroku keys:clear
+  # Add a new SSH key to Heroku
+  - yes | heroku keys:add
+  # Push to Heroku!
+  - yes | git push heroku master
