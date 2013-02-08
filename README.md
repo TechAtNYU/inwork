@@ -5,3 +5,5 @@ inwork
 
 An internal ad network for Tech@NYU
 
+Careful, pushing to the master branch will automatically deploy!
+
