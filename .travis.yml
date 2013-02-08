@@ -4,7 +4,7 @@ rvm:
 env:
   - DB=sqlite
 script:
-  - RAILS_ENV=test bundle exec rake --trace db:migrate test
+  - RAILS_ENV=test bundle exec rake 
 env:
   global:
     - secure: "PMeN9rrrN4gKV1twquMFPVR+M6nEAniND/bbnAl4O+QM8WK20VNZoJzC/NAv\nHDjE3F4YbYm2D+PUDk/+vq/UtjpAaCqYVhNANm6N2ec6qNylIyOPOeZbqAv1\ni3BUa9DE09c8kqwE5Y09kismY9+FvELDVz2weFnecVhfSDgZWKA="
